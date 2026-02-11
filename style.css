@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+}
+
+.game {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    background: url("background.jpg") center/cover no-repeat;
+    overflow: hidden;
+}
+
+/* Score */
+.scoreBox {
+    position: absolute;
+    top: 25px;
+    left: 30px;
+    font-size: 26px;
+    font-weight: bold;
+    color: white;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 10px 20px;
+    border-radius: 12px;
+    z-index: 20;
+}
+
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-8px); }
+    100% { transform: translateY(0px); }
+}
+
+/* Start Message */
+#startMessage {
+    position: absolute;
+    bottom: 120px;
+    width: 100%;
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 0 0 12px #ffd700;
+    animation: blink 1.5s infinite;
+}
+
+@keyframes blink {
+    0%,100% { opacity: 1; }
+    50% { opacity: 0.4; }
+}
+
+/* Input */
+.bottomBar {
+    position: absolute;
+    top: 25px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 30;
+}
+
+#input {
+    width: 420px;
+    padding: 16px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 18px;
+    border: none;
+    outline: none;
+    text-align: center;
+    background: rgba(255,255,255,0.85);
+    color: black;
+}
+
+/* Penguin */
+#penguin {
+    width: 110px;
+    position: absolute;
+    left: 120px;
+    bottom: 45px;
+}
+
+/* Obstacle */
+#obstacle {
+    position: absolute;
+    bottom: 45px;
+}
+
+#obstacleImg {
+    display: block;
+}
+
+/* Challenge Text */
+#challenge {
+    position: absolute;
+    top: -45px;
+    width: 100%;
+    text-align: center;
+    font-size: 26px;
+    font-weight: bold;
+    color: #0b3d91;
+
+    text-shadow:
+        -2px -2px 0 #ffd700,
+         2px -2px 0 #ffd700,
+        -2px  2px 0 #ffd700,
+         2px  2px 0 #ffd700,
+         0px  0px 6px #ffd700;
+}
+
+/* Snow */
+.snow {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: white;
+    border-radius: 50%;
+    opacity: 0.8;
+    animation: fall linear forwards;
+}
+
+@keyframes fall {
+    from { transform: translateY(-10px); }
+    to { transform: translateY(100vh); }
+}
+
+/* Game Over */
+#gameOverScreen {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    backdrop-filter: blur(6px);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 50;
+}
+
+.gameOverBox {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 50px 70px;
+    border-radius: 25px;
+    text-align: center;
+    color: white;
+}

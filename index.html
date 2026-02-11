@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Penguin Runner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="game" id="gameArea">
+
+    <!-- Score -->
+    <div class="scoreBox">
+        Score: <span id="score">0</span>
+    </div>
+
+    <!-- Start Message -->
+    <div id="startMessage">
+        Press SPACE to Start
+    </div>
+
+    <!-- Penguin -->
+    <img id="penguin" src="penguin.gif">
+
+    <!-- Obstacle -->
+    <div id="obstacle">
+        <img id="obstacleImg">
+        <div id="challenge"></div>
+    </div>
+
+    <!-- Game Over -->
+    <div id="gameOverScreen">
+        <div class="gameOverBox">
+            <h2>GAME OVER</h2>
+            <p>Final Score: <span id="finalScore"></span></p>
+            <p>Press SPACE to Restart</p>
+        </div>
+    </div>
+
+</div>
+
+<!-- Input -->
+<div class="bottomBar">
+    <input 
+        type="text" 
+        id="input" 
+        placeholder="Type the word..."
+        autocomplete="off">
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
